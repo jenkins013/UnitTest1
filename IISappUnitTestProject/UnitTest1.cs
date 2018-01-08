@@ -17,13 +17,15 @@ namespace IISappUnitTestProject
     public class UnitTest1
     {
         InternetExplorerOptions options = new InternetExplorerOptions();
+         String path = @"C:\Program Files (x86)\Jenkins\workspace\UnitTestJob\IISappUnitTestProject";
 
         IWebDriver IEDriver = null;
         [TestInitialize]
         public void initialize()
         {
             options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
-            IEDriver = new InternetExplorerDriver(options);
+           // IEDriver = new InternetExplorerDriver(options);
+            IEDriver = new InternetExplorerDriver(path,options);
             IEDriver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(0, 0, 30));
 
         }
