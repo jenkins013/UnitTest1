@@ -35,9 +35,9 @@ namespace IISappUnitTestProject
             IEDriver.Navigate().GoToUrl("https://applicationjenkins.azurewebsites.net ");
             IEDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
             IEDriver.Manage().Window.Maximize();
-            IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='lead']"));
+            IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
             //IWebElement verifyText = IEDriver.FindElement(By.XPath("/ html / body / div[2] / div[1] / p[1]]"));
-            if (verifyText.GetAttribute("innerHTML").Trim().Equals("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
+            if (verifyText.GetAttribute("innerHTML").Trim().Equals("Learn more »"))
             {
                 Console.WriteLine("Text matched");
             }
@@ -46,6 +46,16 @@ namespace IISappUnitTestProject
                 Console.WriteLine("Text is not matched");
                 Assert.Fail();
             }
+            //IWebElement verifyText = IEDriver.FindElement(By.XPath("/ html / body / div[2] / div[1] / p[1]]"));
+            //if (verifyText.GetAttribute("innerHTML").Trim().Equals("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
+            //{
+            //    Console.WriteLine("Text matched");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Text is not matched");
+            //    Assert.Fail();
+            //}
         }
         [TestCleanup]
         public void Testcleanup()
