@@ -35,6 +35,7 @@ namespace IISappUnitTestProject
             IEDriver.Navigate().GoToUrl("https://applicationjenkins.azurewebsites.net ");
             IEDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
             IEDriver.Manage().Window.Maximize();
+            Thread.Sleep(5000);
             IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
             //IWebElement verifyText = IEDriver.FindElement(By.XPath("/ html / body / div[2] / div[1] / p[1]]"));
             if (verifyText.GetAttribute("innerHTML").Trim().Equals("Learn more »"))
