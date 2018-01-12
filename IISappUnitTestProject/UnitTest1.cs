@@ -36,8 +36,8 @@ namespace IISappUnitTestProject
             IEDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
             IEDriver.Manage().Window.Maximize();
             Thread.Sleep(5000);
-            IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
-            //IWebElement verifyText = IEDriver.FindElement(By.XPath("/ html / body / div[2] / div[1] / p[1]]"));
+            //IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
+            IWebElement verifyText = IEDriver.FindElement(By.CssSelector("body > div.container.body-content > div.jumbotron > p:nth-child(3) > a"));
             if (verifyText.GetAttribute("innerHTML").Trim().Equals("Learn more »"))
             {
                 Console.WriteLine("Text matched");
