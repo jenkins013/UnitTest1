@@ -35,10 +35,11 @@ namespace IISappUnitTestProject
             IEDriver.Navigate().GoToUrl("https://applicationjenkins.azurewebsites.net ");
             IEDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
             IEDriver.Manage().Window.Maximize();
-            Thread.Sleep(5000);
+            Thread.Sleep(15000);
             //IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
-            IWebElement verifyText = IEDriver.FindElement(By.CssSelector("body > div.container.body-content > div.jumbotron > p:nth-child(3) > a"));
-            if (verifyText.GetAttribute("innerHTML").Trim().Equals("Learn more »"))
+            //IWebElement verifyText = IEDriver.FindElement(By.CssSelector("body > div.container.body-content > div.jumbotron > p:nth-child(3) > a"));
+            IWebElement verifyText = IEDriver.FindElement(By.ClassName("jumbotron"));
+            if (verifyText.GetAttribute("innerText").Trim().Contains("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
             {
                 Console.WriteLine("Text matched");
             }
