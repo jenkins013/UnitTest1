@@ -37,29 +37,6 @@ namespace IISappUnitTestProject
             IEDriver.Manage().Window.Maximize();
             Thread.Sleep(15000);
             Console.WriteLine("Launched Successfully");
-            //IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='btn btn-primary btn-lg']"));
-            //IWebElement verifyText = IEDriver.FindElement(By.CssSelector("body > div.container.body-content > div.jumbotron > p:nth-child(3) > a"));
-            //IWebElement verifyText = IEDriver.FindElement(By.ClassName("jumbotron"));
-            //IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='lead']"));
-            //if (verifyText.GetAttribute("innerText").Trim().Contains("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
-            //{
-            //    Console.WriteLine("Text matched");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Text is not matched");
-            //    Assert.Fail();
-            //}
-            //IWebElement verifyText = IEDriver.FindElement(By.XPath("/ html / body / div[2] / div[1] / p[1]]"));
-            //if (verifyText.GetAttribute("innerHTML").Trim().Equals("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
-            //{
-            //    Console.WriteLine("Text matched");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Text is not matched");
-            //    Assert.Fail();
-            //}
         }
         [TestCleanup]
         public void Testcleanup()
