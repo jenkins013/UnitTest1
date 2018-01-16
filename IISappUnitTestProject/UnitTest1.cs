@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
 //using System.Collections.ObjectModel;
-using System.Configuration;
+//using System.Configuration;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Remote;
 using System.Threading;
